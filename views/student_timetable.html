@@ -91,6 +91,10 @@
                 </ul>
             </div>
         </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
     </header>
 
     <main>
@@ -128,6 +132,12 @@
         document.getElementById('download-csv').onclick = function() {
             window.location.href = '/download-timetable/{roll_number}';
         };
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
     </script>
 </body>
 </html>

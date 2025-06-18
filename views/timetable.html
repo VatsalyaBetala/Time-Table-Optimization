@@ -149,6 +149,10 @@
                 </ul>
             </div>
         </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
     </header>
 
     <main>
@@ -304,9 +308,15 @@
         document.getElementById('get-data').onclick = function() {
             window.location.href = '/get_admin_data';
         };
-        document.getElementById('send-schedule').onclick = function() {
-            window.location.href = '/get_role_no';
-        };
+    document.getElementById('send-schedule').onclick = function() {
+        window.location.href = '/get_role_no';
+    };
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
     </script>
 </body>
 </html>
